@@ -12,7 +12,11 @@ This project currently uses IDE version `v2022.2.1.618`, and is tested with Runt
 ## Current Progress
 
   * [Episode 1](https://www.youtube.com/watch?v=QYtUkzjWd-Q)
+  * [Episode 2](https://www.youtube.com/watch?v=SZP7AL6PKGg)
 
 ## License
 
-I don't really know. [QSV's code snippet repo](https://github.com/TheRealQSV/UT-CodeSnippets) may have one soon, and if it does, I'll use the license it uses.
+This is yet to be licensed with an actual license. [QSV's code snippet repo](https://github.com/TheRealQSV/UT-CodeSnippets) may have one soon, and if it does, I'll use the license it uses.
+
+Meanwhile, have this:
+![You can use it in your project if you wish, I won't mind at all. All I ask is that, if you're using code from another source - please give credit.](assets/very_legal_license.png)

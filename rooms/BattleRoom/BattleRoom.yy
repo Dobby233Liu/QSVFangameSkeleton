@@ -49,7 +49,7 @@
   },
   "parent": {
     "name": "Rooms",
-    "path": "folders/Episode 1/Rooms.yy",
+    "path": "folders/Rooms.yy",
   },
   "resourceVersion": "1.0",
   "name": "BattleRoom",

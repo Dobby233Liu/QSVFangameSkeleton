@@ -1,9 +1,13 @@
 {
   "resources": [
     {"id":{"name":"obj_Soul","path":"objects/obj_Soul/obj_Soul.yy",},"order":0,},
+    {"id":{"name":"font_battleui_widgets","path":"fonts/font_battleui_widgets/font_battleui_widgets.yy",},"order":1,},
     {"id":{"name":"obj_GlobalParams","path":"objects/obj_GlobalParams/obj_GlobalParams.yy",},"order":1,},
+    {"id":{"name":"TestBullet","path":"sprites/TestBullet/TestBullet.yy",},"order":1,},
+    {"id":{"name":"obj_Bullet","path":"objects/obj_Bullet/obj_Bullet.yy",},"order":3,},
     {"id":{"name":"obj_BulletBoard","path":"objects/obj_BulletBoard/obj_BulletBoard.yy",},"order":2,},
     {"id":{"name":"Soul","path":"sprites/Soul/Soul.yy",},"order":0,},
+    {"id":{"name":"font_battleui_hp","path":"fonts/font_battleui_hp/font_battleui_hp.yy",},"order":0,},
     {"id":{"name":"BattleRoom","path":"rooms/BattleRoom/BattleRoom.yy",},"order":0,},
   ],
   "Options": [
@@ -21,10 +25,10 @@
     {"roomId":{"name":"BattleRoom","path":"rooms/BattleRoom/BattleRoom.yy",},},
   ],
   "Folders": [
-    {"folderPath":"folders/Episode 1/Sprites.yy","order":2,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Episode 1/Objects.yy","order":0,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Episode 1/Rooms.yy","order":1,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Episode 1.yy","order":9,"resourceVersion":"1.0","name":"Episode 1","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites.yy","order":2,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects.yy","order":1,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Rooms.yy","order":3,"resourceVersion":"1.0","name":"Rooms","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Fonts.yy","order":4,"resourceVersion":"1.0","name":"Fonts","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
