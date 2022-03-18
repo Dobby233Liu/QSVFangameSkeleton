@@ -1,7 +1,7 @@
 QSVFangameSkeleton
 ========================
 
-So, I put [QSV Gaming](https://www.youtube.com/c/QSVGaming)'s in his How To Make An Undertale Fangame series together into a GameMaker: Studio 2 project.
+So, I put [QSV Gaming](https://www.youtube.com/c/QSVGaming)'s stuff in his How To Make An Undertale Fangame series together into a [GameMaker Studio 2](https://www.yoyogames.com/get) project.
 
 The series is cool, you should check it out!
 
