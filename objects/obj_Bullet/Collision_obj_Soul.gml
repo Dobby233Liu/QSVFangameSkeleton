@@ -1,4 +1,5 @@
 if (global.InvFrames <= 0) {
+	audio_play_sound(Hurt, 1, false);
 	global.InvFrames = 30;
 	global.PlayerHP -= dmg;
 	if (global.PlayerHP <= 0) {

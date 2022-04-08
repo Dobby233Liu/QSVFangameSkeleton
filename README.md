@@ -13,6 +13,7 @@ This project currently uses IDE version `v2022.2.1.618`, and is tested with Runt
 
   * [Episode 1](https://www.youtube.com/watch?v=QYtUkzjWd-Q)
   * [Episode 2](https://www.youtube.com/watch?v=SZP7AL6PKGg)
+  * [Episode 3](https://www.youtube.com/watch?v=mZrT2cplb5g)
 
 ## License
 

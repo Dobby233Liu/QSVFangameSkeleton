@@ -3,11 +3,102 @@ var border_r = 320 + (current_width / 2);
 var border_u = 384 - current_height;
 var border_d = 384;
 
+if (current_width == 570 && current_height == 120) {
+	// Set up the text writer
+	if instance_exists(Dialogue) {
+		Dialogue.visible = false;
+		Fight.visible = false;
+		Act.visible = false;
+		ItemL.visible = false;
+		ItemR.visible = false;
+		Mercy.visible = false;
+	}
+	if (global.BattleMenu == -1) {
+		// Create the instance responsible for drawing text
+		Dialogue = instance_create_depth(border_l + 30, border_u + 15, 0, obj_TextElement);
+		Dialogue.TextToDraw = "* I'm a ~Btext~D. I have some&  ~Rdeadly~D properties, and ~Ablue&  ~Ohot ~Ghealing~D items. ~YSpare~D me. ~P<3";
+		Dialogue.CanAdvance = false;
+		
+		Fight = instance_create_depth(border_l + 50, border_u + 15, 0, obj_TextElement);
+		for (var i = 0; i < array_length(global.Monster); i++) {
+			Fight.TextToDraw = "* " + global.Monster[i].MyName;
+		}
+		Fight.TextLength = string_length(Fight.TextToDraw);
+		Fight.CanAdvance = false;
+		Fight.visible = false;
+		
+		Act = instance_create_depth(border_l + 50, border_u + 15, 0, obj_TextElement);
+		for (var i = 0; i < array_length(global.Monster); i++) {
+			Act.TextToDraw = "* " + global.Monster[i].MyName;
+		}
+		Act.TextLength = string_length(Act.TextToDraw);
+		Act.CanAdvance = false;
+		Act.visible = false;
+		
+		ItemL = instance_create_depth(border_l + 50, border_u + 15, 0, obj_TextElement);
+		for (var i = 0; i < array_length(global.Item); i += 2) {
+			ItemL.TextToDraw += "* " + global.Item[i] + "&";
+		}
+		ItemL.TextLength = string_length(ItemL.TextToDraw);
+		ItemL.CanAdvance = false;
+		ItemL.visible = false;
+		
+		ItemR = instance_create_depth(border_l + 300, border_u + 15, 0, obj_TextElement);
+		for (var i = 1; i < array_length(global.Item); i += 2) {
+			ItemR.TextToDraw += "* " + global.Item[i] + "&";
+		}
+		ItemR.TextLength = string_length(ItemR.TextToDraw);
+		ItemR.CanAdvance = false;
+		ItemR.visible = false;
+		
+		Mercy = instance_create_depth(border_l + 50, border_u + 15, 0, obj_TextElement);
+		for (var i = 0; i < array_length(global.Monster); i++) {
+			if global.Monster[i].CanSpare {
+				Mercy.TextToDraw += "~Y";
+				break;
+			}
+		}
+		Mercy.TextToDraw += "* Spare~D&* Flee";
+		if !global.CanFlee
+			Mercy.TextToDraw += "* Spare";
+		Mercy.TextLength = string_length(Mercy.TextToDraw);
+		Mercy.CanAdvance = false;
+		Mercy.visible = false;
+		
+		// For long conversations such as in cutscenes, use an array to store your next few lines
+		// In this case, I've set it to have 256 total lines if they are all full, but you can use up to 32,000 (Game Maker limitation, yay)
+		// EXAMPLE:
+		// Dialogue.TextToDraw = "* Hi guys, I'm present.&* Where's my cookie?";
+		// Dialogue.TextQueue[0] = "* Sorry, you don't get one.";
+		// Dialogue.TextQueue[1] = "* WHAT DO YOU MEAN?";
+		// Dialogue.TextQueue[2] = "* I WAS WORKING FOR 60 HOURS&  AND YOU HAVEN'T GIVEN ME ONE!";
+		// Dialogue.TextQueue[3] = "* Sorry, mate. But I'm afraid&  you still don't get one...";
+		
+		// EXAMPLE FROM UNDERTALE REJUVENATION
+		// Dialogue.TextToDraw = "* The Great Papyrus&  110 - ATK, 80 - DEF.";
+		// Dialogue.TextQueue[0] = "* Can't take damage...&* Maybe try tiring him out!";
+		
+		// Sets the menu state to enable menu navigation
+		// Also gets us out of this loop so that you don't create infinite writers, which would cause a memory leak and crash the game
+		global.BattleMenu = 0;
+	}
+	if (global.BattleMenu == 0)
+		Dialogue.visible = true;
+	if (global.BattleMenu == 1)
+		Fight.visible = true;
+	if (global.BattleMenu == 2)
+		Act.visible = true;
+	if (global.BattleMenu == 3) {
+		ItemL.visible = true;
+		ItemR.visible = true;
+	}
+	if (global.BattleMenu == 4)
+		Mercy.visible = true;
+}
+
 // Clamps the Soul object inside the Bullet Board
-/*  ORIGINAL
-    obj_Soul.x = clamp(obj_Soul.x, border_l + 8, border_r - 8);
-    obj_Soul.y = clamp(obj_Soul.y, border_u + 8, border_d - 8);
-*/
+/* obj_Soul.x = clamp(obj_Soul.x, border_l + 8, border_r - 8);
+obj_Soul.y = clamp(obj_Soul.y, border_u + 8, border_d - 8); */
 // Dobby233Liu: change to account for any collision mask settings
 obj_Soul.x = clamp(obj_Soul.x, border_l + obj_Soul.sprite_xoffset, border_r - obj_Soul.sprite_xoffset);
 obj_Soul.y = clamp(obj_Soul.y, border_u + obj_Soul.sprite_yoffset, border_d - obj_Soul.sprite_yoffset);
