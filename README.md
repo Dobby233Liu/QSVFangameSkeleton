@@ -7,7 +7,7 @@ The series is cool, you should check it out! Also check the [official code snipp
 
 ## GameMaker Studio 2 IDE Version
 
-This project currently uses IDE version `v2022.2.1.618`, and is tested with Runtime `v2022.2.1.491`.
+This project currently uses IDE version `v2022.3.0.624`, and is tested with Runtime `v2022.3.0.496`.
 
 ## Current Progress
 
