@@ -1,3 +1,7 @@
+ARCHIVED
+========================
+i don't feel like updating this project at all so. here you go.
+
 QSVFangameSkeleton
 ========================
 
